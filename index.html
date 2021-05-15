@@ -8,140 +8,194 @@
 </head>
 <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        
-        list-style: none;
-        text-decoration: none;
-      }
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      list-style: none;
+      text-decoration: none;
+    }
     body {
-  background: #000000;
-   margin: 0 auto;
-}
+      background: #000000;
+      margin: 0 auto;
+      max-height: 100vh;
+    }
 
-nav {
-  position: relative;
-  overflow: hidden;
-  margin-left: 1rem;
-  margin-top: 5rem;
-  word-spacing: -5px;
-  width: 100vw;
-  height: 100vh;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+    nav {
+      position: relative;
+      overflow: hidden;
+      margin-left: 1rem;
+      
+      padding-bottom: 5rem;
+      word-spacing: -5px;
 
-nav ul {
-  margin: 0 auto;
-  padding: 0;
-  display: inline-block;
-}
+      height: 80vh;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-nav li {
-  background: transparent;
-  word-spacing: 0;
-  color: white;
-  width:  10vw;
-  list-style: none;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-right: none;
-  border-bottom: none;
-  font-family: calibri light;
-  letter-spacing: 3px;
-  box-shadow: inset -50px 0 175px -50px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
+    nav ul {
+      margin: 0 auto;
+      padding: 0;
+      display: inline-block;
+    }
 
-nav li:hover {
-  box-shadow: inset -50px 0 175px -50px rgba(0, 0, 0, 0.1);
-}
+    nav li {
+      background: transparent;
+      word-spacing: 0;
+      color: white;
+      width: 10vw;
+      list-style: none;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: none;
+      border-bottom: none;
+      font-family: calibri light;
+      letter-spacing: 3px;
+      box-shadow: inset -50px 0 175px -50px rgba(0, 0, 0, 0.2);
+      cursor:default;
+    }
 
-nav li:active {
-  background: rgba(255,170,118, .5);
-}
+       nav li:active {
+      background: rgba(255, 170, 118, 0.5);
+    }
 
+      nav > div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 90vw;
+      height: 100%;
+      background: transparent;
+      padding: 25px;
+      font-family: calibri;
+      word-spacing: 3px;
+    }
 
-/* nav li:hover span {
-  display: block;
-} */
+    nav li > div {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 90vw;
+      height: 100%;
+      background: transparent;
+      padding: 25px;
+      font-family: calibri;
+      letter-spacing: 1px;
+      z-index: 10;
+    }
 
-nav > div {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 90vw;
-  height: 100%;
-  background: transparent;
-  padding: 25px;
-  font-family: calibri;
-  word-spacing:3px;
-}
+    nav div h1 {
+      margin: 0 auto;
+      font-family: calibri light;
+      font-size: 25px;
+    }
 
-nav li > div {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 90vw;
-  height: 100%;
-  background: transparent;
-  padding: 25px;
-  font-family: calibri;
-  letter-spacing: 1px;
-  z-index: 10;
-}
+    nav li:focus {
+      outline: none;
+      /* background: white; */
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: none;
+    }
 
-nav div h1 {
-  margin: 0 auto;
-  font-family: calibri light;
-  font-size: 25px;
-}
+    nav li:focus > div {
+      display: block;
+    }
+    .foto_grid {
+      margin-top:20rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 20px;
+      align-items: start;
+    }
 
-nav li:focus {
-  outline: none;
-  /* background: white; */
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: none;
-}
-
-nav li:focus > div {
-  display: block;
-}
-.foto_grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-  align-items: start;
-}
-
-  img:hover{
-      transform: scale(2);
+    img:hover {
+      transform: scale(3);
       transition: 0.5s;
-  }
-  
+    }
 
-.foto_grid img {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  max-width: 100%;
-}
-span{
-  max-width: 80vw;
-  margin-top: 20%;
-}
+    .foto_grid img {
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+      max-width: 80%;
+    }
+    span {
+      max-width: 60vw;
+      margin-top: 10%;
+      margin-left: 9rem;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    div>p{
+      max-width: 60vw;
+    }
+    header{
+      background-color: darkgrey;
+      max-height: 20vh;
+      max-width: 100vw;
+      margin-top: 5vh;
+      
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+    }
 
-</style>
+  </style>
 <body>
+     <header>
+            CLOUD CHAMBER PROJECT
+    </header>
     <nav>
         <ul>
           <li tabindex="0">
             <b>APIE</b>
             
             <div>
-              <h1>1</h1>
-              <p></p>
+              <h1>Lorem</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              libero veritatis laborum explicabo vel natus magni voluptatem
+              animi eveniet in, ex, debitis eaque laboriosam inventore fugiat,
+              iste facilis dolorum ipsa optio eius quibusdam deleniti recusandae
+              atque! Ut, nihil nemo delectus a dignissimos vero est quam id quos
+              illum, totam dolores laboriosam alias ratione libero eum minima
+              pariatur magni? Ipsum perferendis voluptatum, delectus at saepe
+              alias voluptate voluptas officiis placeat! Soluta nulla veniam
+              earum obcaecati explicabo? Vel vero in aspernatur porro, accusamus
+              quo! Molestias recusandae enim provident assumenda atque? Officia
+              harum fugiat corrupti natus ab eaque, error ex vitae minus
+              voluptates quia placeat ipsum neque. Architecto, impedit
+              accusantium corporis ab natus autem accusamus odit quibusdam sint
+              tempora, ad dolorem ipsum dolorum nobis iste? Dolorum ex itaque
+              eligendi, optio perferendis distinctio nesciunt quo corporis
+              soluta cum voluptatibus excepturi ducimus maiores saepe! Quod,
+              ullam ipsum! Cupiditate, incidunt nemo. Exercitationem facere
+              laboriosam aut aliquid unde totam ipsa, excepturi obcaecati
+              provident voluptatibus alias blanditiis tempore. Non labore ea aut
+              quibusdam fuga consequatur at? Earum quasi neque molestias enim
+              tempore consequuntur harum. Iste omnis debitis harum ad, impedit
+              totam eos corrupti sit quod at voluptatem blanditiis ducimus
+              facilis numquam amet maxime porro consectetur dicta unde tempore.
+              Atque neque, perferendis minima in eligendi consequatur sed hic
+              maxime totam soluta repellendus repudiandae sunt magnam
+              reiciendis! Cum tempora nulla omnis atque eius inventore! Nam,
+              fuga minus consequatur facilis incidunt deserunt eaque cumque, est
+              accusantium dolore commodi perferendis sint doloremque dolores ad
+              explicabo! Fugiat eum quisquam cumque expedita quasi ducimus
+              necessitatibus porro excepturi, dolore illo consequuntur modi
+              possimus quo beatae deleniti nemo totam iure ratione, quidem
+              tempora doloremque non impedit pariatur. Laborum distinctio
+              dignissimos quasi. Adipisci pariatur, iste deleniti autem error
+              iure dolore ex similique, cupiditate quam blanditiis fuga tempore
+              odio natus ut asperiores praesentium recusandae. Quidem aliquid ab
+              commodi.</p>
             </div>
           </li>
           <li tabindex="0">
