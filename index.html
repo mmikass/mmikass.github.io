@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
+  </head>
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -25,11 +25,10 @@
       position: relative;
       overflow: hidden;
       margin-left: 1rem;
-      
-      padding-bottom: 5rem;
+          
       word-spacing: -5px;
 
-      height: 80vh;
+      height: 90vh;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
@@ -115,12 +114,13 @@
       transition: 0.5s;
     }
 
-    .foto_grid img {
+    .foto_grid > img {
       border: 1px solid #ccc;
       box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
       max-width: 80%;
     }
     span {
+      display: grid;
       max-width: 60vw;
       margin-top: 10%;
       margin-left: 9rem;
@@ -147,29 +147,22 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       text-align: center;
     }
-    .footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      color: white;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    }
 
   </style>
-<body>
-     <header>
+  <body>
+    <header>
             CLOUD CHAMBER PROJECT
     </header>
     <nav>
-        <ul>
-          <li tabindex="0">
-            <b>APIE</b>
-            
-            <div>
-              <h1>Lorem</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+      
+      <ul>
+        <li tabindex="0">
+          <b>APIE</b>
+
+          <div>
+            <h1>Lorem.</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
               libero veritatis laborum explicabo vel natus magni voluptatem
               animi eveniet in, ex, debitis eaque laboriosam inventore fugiat,
               iste facilis dolorum ipsa optio eius quibusdam deleniti recusandae
@@ -204,55 +197,89 @@
               dignissimos quasi. Adipisci pariatur, iste deleniti autem error
               iure dolore ex similique, cupiditate quam blanditiis fuga tempore
               odio natus ut asperiores praesentium recusandae. Quidem aliquid ab
-              commodi.</p>
-            </div>
-          </li>
-          <li tabindex="0">
-            <b>ISTORIJA</b>
-           
-            <div>
-              <h1>2</h1>
-              <p></p>
-            </div>
-          </li>
-          <li tabindex="0">
-            <b>KAIP TAI VEIKIA</b>
-            
-            <div>
-              <h1>3</h1>
-              <p></p>
-            </div>
-          </li>
-          <li tabindex="0">
-            <b>GALERIJA</b>
-            
-            <div>
-              <span class="foto_grid">
-                  <img src="1.jpg" alt="particle photo" loading="lazy">
-                  <img src="2.jpg" alt="particle photo" loading="lazy">
-                  <img src="3.jpg" alt="particle photo" loading="lazy">
-                  <img src="4.jpg" alt="particle photo" loading="lazy">
-                  <img src="5.jpg" alt="particle photo" loading="lazy">
-                  <img src="6.jpg" alt="particle photo" loading="lazy">
-                  <img src="7.jpg" alt="particle photo" loading="lazy">
-                  <img src="8.jpg" alt="particle photo" loading="lazy">
-                  <img src="9.jpg" alt="particle photo" loading="lazy">
-                  
-              </span>
-            </div>
-          </li>
-          <li tabindex="0">
-            <b>KONTAKTAI</b>
-            
-            <div>
-              <h1>5</h1>
-              <p></p>
-            </div>
-          </li>
-        </ul>  
-        
-      </nav>
-    
-</body>
-    <footer class="footer">Mikas Jarašiūnas</footer>
+              commodi.
+            </p>
+          </div>
+        </li>
+        <li tabindex="0">
+          <b>ISTORIJA</b>
+
+          <div>
+            <h1>2</h1>
+            <p></p>
+          </div>
+        </li>
+        <li tabindex="0">
+          <b>KAIP TAI VEIKIA</b>
+
+          <div>
+            <h1>3</h1>
+            <p></p>
+          </div>
+        </li>
+        <li tabindex="0">
+          <b>GALERIJA</b>
+
+          <div>
+            <span class="foto_grid">
+              <img
+                src="/cloudchamber/foto/1.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+              <img
+                src="/cloudchamber/foto/2.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+              <img
+                src="/cloudchamber/foto/3.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+              <img
+                src="/cloudchamber/foto/4.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+              <img
+                src="/cloudchamber/foto/5.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+              <img
+                src="/cloudchamber/foto/6.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+              <img
+                src="/cloudchamber/foto/7.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+              <img
+                src="/cloudchamber/foto/8.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+              <img
+                src="/cloudchamber/foto/9.jpg"
+                alt="particle photo"
+                loading="lazy"
+              />
+            </span>
+          </div>
+        </li>
+        <li tabindex="0">
+          <b>KONTAKTAI</b>
+
+          <div>
+            <h1>5</h1>
+            <p></p>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </body>
+  <footer class="footer">Mikas Jarašiūnas</footer>
 </html>
